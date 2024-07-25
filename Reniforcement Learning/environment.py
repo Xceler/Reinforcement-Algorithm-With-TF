@@ -4,7 +4,7 @@ class SimpleEnvironment:
         self.end_state = 5 
     
     def reset(self):
-        self.state = 0 
+        self.state = 0
         return self.state 
     
     def step(self, action):
@@ -15,8 +15,10 @@ class SimpleEnvironment:
         
         if self.state == self.end_state:
             return self.state, 1, True 
+        
         elif self.state < 0 or self.state > self.end_state:
-            return self.state, -1, True 
+            return self.state, -1, True
+        
         else:
             return self.state, 0, False 
         

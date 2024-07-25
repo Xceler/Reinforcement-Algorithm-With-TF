@@ -1,6 +1,7 @@
 import tensorflow as tf 
 from tensorflow.keras import layers 
 
+
 class PolicyNetwork(tf.keras.Model):
     def __init__(self, state_size, action_size):
         super(PolicyNetwork, self).__init__()
@@ -11,6 +12,6 @@ class PolicyNetwork(tf.keras.Model):
     def call(self, inputs):
         x = self.dense1(inputs)
         x = self.dense2(x)
-        return self.output_layer(x) 
+        return self.output_layer(x)
     
     
